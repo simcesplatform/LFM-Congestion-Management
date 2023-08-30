@@ -1,0 +1,4 @@
+[submodule "domain-messages"]
+	path = domain-messages
+	url = https://github.com/simcesplatform/domain-messages.git
+	branch = master
