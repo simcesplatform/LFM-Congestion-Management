@@ -449,39 +449,22 @@ class LFM(AbstractSimulationComponent):
             for index in range( len( self._results ) ):
                 await self._publishMarketResult(index)
 
-    # def _purgeOutdated(self):
-    #     for index in range( len( self._needs ) ):        # removing the needs that has a passed activation time
-    #         need_actv_time = to_utc_datetime_object(self._needs[index].activation_time)
-    #         if need_actv_time < self._epoch_endtime:
-    #             self._needs[index]=None
-
-    #     for index in range( len( self._offers ) ):      # removing offers that has a passed activation time
-    #         offer_actv_time = to_utc_datetime_object(self._offers[index].activation_time)
-    #         if offer_actv_time < self._epoch_endtime:
-    #             self._offers[index]=None
-
-    #     for index in range( len( self._results ) ):    # removing results that has passed
-    #         result_actv_time = to_utc_datetime_object(self._results[index].activation_time)
-    #         result_duration_seconds = self._results[index].duration.value * 60
-    #         if result_actv_time + timedelta(seconds=result_duration_seconds)< self._epoch_endtime:
-    #             self._results[index]=None
-
-    #     while None in self._results:
-    #         self._results.remove(None)
-    #     while None in self._offers:
-    #         self._offers.remove(None)
-    #     while None in self._needs:
-    #         self._needs.remove(None)
-
     def _purgeOutdated(self):
-        for index in range( len( self._needs ) ):        # removing the needs in the beginning of an epoch
+        for index in range( len( self._needs ) ):        # removing the needs that has a passed activation time
+            # need_actv_time = to_utc_datetime_object(self._needs[index].activation_time)
+            # if need_actv_time < self._epoch_endtime:
             self._needs[index]=None
 
-        for index in range( len( self._offers ) ):      # removing offers in the beginning of an epoch
+        for index in range( len( self._offers ) ):      # removing offers that has a passed activation time
+            # offer_actv_time = to_utc_datetime_object(self._offers[index].activation_time)
+            # if offer_actv_time < self._epoch_endtime:
             self._offers[index]=None
 
-        for index in range( len( self._results ) ):    # removing results in the beginning of an epoch
-            self._results[index]=None
+        for index in range( len( self._results ) ):    # removing results that has passed
+            result_actv_time = to_utc_datetime_object(self._results[index].activation_time)
+            result_duration_seconds = self._results[index].duration.value * 60
+            if result_actv_time + timedelta(seconds=result_duration_seconds)< self._epoch_endtime:
+                self._results[index]=None
 
         while None in self._results:
             self._results.remove(None)
@@ -489,6 +472,23 @@ class LFM(AbstractSimulationComponent):
             self._offers.remove(None)
         while None in self._needs:
             self._needs.remove(None)
+
+    # def _purgeOutdated(self):
+    #     for index in range( len( self._needs ) ):        # removing the needs in the beginning of an epoch
+    #         self._needs[index]=None
+
+    #     for index in range( len( self._offers ) ):      # removing offers in the beginning of an epoch
+    #         self._offers[index]=None
+
+    #     for index in range( len( self._results ) ):    # removing results in the beginning of an epoch
+    #         self._results[index]=None
+
+    #     while None in self._results:
+    #         self._results.remove(None)
+    #     while None in self._offers:
+    #         self._offers.remove(None)
+    #     while None in self._needs:
+    #         self._needs.remove(None)
 
     def _marketOpen(self):
         #if self._epoch_startime.hour >= self._market_open_hour and self._epoch_endtime.hour <= self._market_closing_hour:
