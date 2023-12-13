@@ -1,3 +1,11 @@
+# Copyright 2023 Tampere University.
+# This software was developed as a part of the ProCemPlus project: https://www.senecc.fi/projects/procemplus
+# This software that was originally developed for ProCemPlus was adjusted to be suitable for doctoral research of Mehdi Attar, founded by Fortum and Neste foundation.
+# This source code is licensed under the MIT license. See LICENSE in the repository root directory.
+# Author(s): 
+#            Antti Supponen (TAU) <antti.supponen@tuni.fi>
+#            Mehdi Attar (TAU) <mehdi.attar@tuni.fi>
+
 import asyncio
 from datetime import timedelta
 from typing import Any, cast, Set, Union
@@ -60,7 +68,7 @@ class LFM(AbstractSimulationComponent):
     def __init__(self, procurers: str, producers, market_open_hour, market_closing_hour):
         # This will initialize various variables including the message client for message bus access.
         LOGGER.info("LFM constructor: procurers: {}".format(procurers))
-        LOGGER.info("LFM constructor: produrers: {}".format(producers))
+        LOGGER.info("LFM constructor: producers: {}".format(producers))
         super().__init__()
 
         self._other_topics = [
