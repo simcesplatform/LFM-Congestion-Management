@@ -54,6 +54,6 @@ If at any stage of the execution Status (Error) message is received component wi
 The following packages are needed.
 
 
-| Package          | Version   | Why needed                                                                                | URL                                                                                                         |
-| ---------------- | --------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Simulation Tools | (Unknown) | "Tools for working with simulation messages and with the RabbitMQ message bus in Python." | [https://git.ain.rd.tut.fi/procemplus/simulation-tools](https://git.ain.rd.tut.fi/procemplus/simulation-tools) |
+| Package          | Version   | Why needed                                                                                | URL                                                |
+| ---------------- | --------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Simulation Tools | (Unknown) | "Tools for working with simulation messages and with the RabbitMQ message bus in Python." | https://github.com/simcesplatform/simulation-tools |
