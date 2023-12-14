@@ -3,7 +3,7 @@ FROM python:3.9.1
 
 # optional labels to provide metadata for the Docker image
 # (source: address to the repository, description: human-readable description)
-LABEL org.opencontainers.image.source https://github.com/simcesplatform/lfm.git
+LABEL org.opencontainers.image.source https://github.com/mehdiattar-lab/lfm.git
 LABEL org.opencontainers.image.description "Docker image for the Local Flexibility Market (LFM) component."
 
 

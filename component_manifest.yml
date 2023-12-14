@@ -15,7 +15,7 @@ Type: platform
 # DockerImage is required attribute for platform managed components.
 # For externally managed components it is ignored.
 # The value should be the name of the Docker image that contains the simulation component.
-DockerImage: ghcr.io/simcesplatform/lfm
+DockerImage: ghcr.io/mehdiattar-lab/lfm
 
 # Description is an optional attribute which can contain a description of the component to the simulation platform.
 Description: "Procem LFM of the SimCes Platform"
