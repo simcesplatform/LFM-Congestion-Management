@@ -43,17 +43,16 @@ If at any stage of the execution Status (Error) message is received component wi
 
 **Implementation details**
 
-- Language and platform
+* Language and platform
 
-| Programming language | Python                                               |
-| -------------------- | ---------------------------------------------------- |
-| Platform             | Python 3.8.3                                         |
-| Operating system     | Docker Ubuntu (give image name and version), Windows |
+| Programming language | Python 3.11.4                                             |
+| -------------------- | ---------------------------------------------------------- |
+| Operating system     | Docker version 20.10.21 running on windows 10 version 22H2 |
 
 **External packages**
 
 The following packages are needed.
 
-| Package          | Version   | Why needed                                                                                | URL                                                |
-| ---------------- | --------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| Simulation Tools | (Unknown) | "Tools for working with simulation messages and with the RabbitMQ message bus in Python." | https://github.com/simcesplatform/simulation-tools |
+| Package          | Version   | Why needed                                                                                | URL                                                                                                   |
+| ---------------- | --------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Simulation Tools | (Unknown) | "Tools for working with simulation messages and with the RabbitMQ message bus in Python." | [https://github.com/simcesplatform/simulation-tools](https://github.com/simcesplatform/simulation-tools) |
